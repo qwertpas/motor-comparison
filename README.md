@@ -9,3 +9,5 @@ The X axis supports mass, diameter and nominal envelope volume (cm³). Diameter 
 `index.html` is the self-contained website. `motor-comparison.html` is the same file for offline download. GitHub Pages serves the root of the `main` branch.
 
 Nominal envelope volume is π × (nominal diameter / 2)² × nominal stack/body length / 1000, with dimensions in mm. Entries lacking a nominal length are omitted whenever either axis uses volume.
+
+The unchecked “Include larger TQ ILM (50 g and up)” checkbox excludes those motors from the plot and axis scaling by default. All entries remain in the catalog table.
