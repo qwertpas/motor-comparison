@@ -19,3 +19,5 @@ Max speed uses a positive adjustable voltage (default 24 V) multiplied by the co
 Each axis has metric and Linear/Log dropdowns directly on its chart label. Both scales default to linear and can be changed independently. Log axes use base 10, with ticks at 1, 2 and 5 per decade; entries with nonpositive values on a log axis are omitted.
 
 The chart reserves a separate left margin for Y-axis controls and tick labels. When larger TQ motors are enabled but lack values for the selected axes, the plot note explains the omission; these added TQ entries have no power-density estimate.
+
+Motor specs always show all eight plot metrics, including peak torque at the selected stress, max no-load speed at the selected voltage, and copper loss at the selected motor torque. Plot and specs use the same calculations; missing values are shown as a dash.
