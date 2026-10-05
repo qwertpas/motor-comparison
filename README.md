@@ -4,7 +4,7 @@ Interactive comparison of motor mass, diameter, motor constant and geared power 
 
 Published at https://qwertpas.github.io/motor-comparison/.
 
-The X axis supports mass, diameter, nominal envelope volume (cm³) and max no-load speed (rpm). Diameter consistently uses the nominal diameter encoded in the motor size designation (2306 → 23 mm). The Y axis supports motor constant, power density, P_copper (W), nominal envelope volume (cm³) and calculated peak torque (Nm). Copper loss uses (motor torque / Km)² with an adjustable motor torque, before gearing, at each source’s stated temperature. Linear extrapolation excludes saturation and other running losses. The TQ ILM family covers all 14 sizes in the 2026 Rev0414 datasheet; rated copper losses are shown separately in motor details. Sources and calculation assumptions accompany each entry.
+Both axes support mass, nominal diameter, nominal envelope volume (cm³), max no-load speed (rpm), power density (W/kg), motor constant, P_copper (W) and calculated peak torque (Nm). Each axis has its own metric and Linear/Log selectors on the chart label. Voltage, stress and motor torque controls appear when the corresponding metric is selected on either axis. Copper loss uses (motor torque / Km)² with an adjustable motor torque, before gearing, at each source’s stated temperature. Linear extrapolation excludes saturation and other running losses. The TQ ILM family covers all 14 sizes in the 2026 Rev0414 datasheet; rated copper losses are shown separately in motor details. Sources and calculation assumptions accompany each entry.
 
 `index.html` is the self-contained website. `motor-comparison.html` is the same file for offline download. GitHub Pages serves the root of the `main` branch.
 
@@ -17,3 +17,5 @@ Calculated peak torque uses τ ≈ 2πσr²L = 2σV with nominal dimensions. Tan
 Max speed uses a positive adjustable voltage (default 24 V) multiplied by the collected Kv in rpm/V, capped at known mechanical limits. TQ values use winding-specific no-load speed / DC-link voltage from manufacturer datasheets. The quoted windings use ideal SVPWM and the existing inferred line-RMS Ke convention. Speed constants, calculation basis and sources appear in motor details. Six entries without speed data are omitted; peak torque versus speed supports 129 entries by default or 141 with larger TQ motors. Peak torque and no-load speed are separate endpoints, not a simultaneous operating point.
 
 Each axis has metric and Linear/Log dropdowns directly on its chart label. Both scales default to linear and can be changed independently. Log axes use base 10, with ticks at 1, 2 and 5 per decade; entries with nonpositive values on a log axis are omitted.
+
+The chart reserves a separate left margin for Y-axis controls and tick labels. When larger TQ motors are enabled but lack values for the selected axes, the plot note explains the omission; these added TQ entries have no power-density estimate.
